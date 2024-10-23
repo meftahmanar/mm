@@ -1,44 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Shop</title>
+    <title>Online Shop - Best Products</title>
     <link rel="stylesheet" href="styles.css">
     <meta name="description" content="Complete your order at our online shop. Buy the best products at great prices.">
-    <meta name="keywords" content="online shop, checkout, buy products, ecommerce">
+    <meta name="keywords" content="online shop, ecommerce, buy products, best prices, sales">
     <meta name="author" content="Your Name">
+
+    <!-- SEO Open Graph Tags -->
+    <meta property="og:title" content="My Online Shop">
+    <meta property="og:description" content="Complete your order at our online shop. Buy the best products at great prices.">
+    <meta property="og:image" content="images/shop-logo.jpg">
+    <meta property="og:url" content="https://www.myonlineshop.com">
 </head>
 
 <body>
+    <!-- Navigation Bar -->
     <header>
-        <h1>Welcome to My Online Shop</h1>
-        <div id="cart">
-            <button onclick="showCart()">Cart (<span id="cart-count">0</span>)</button>
-        </div>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li id="cart"><button onclick="showCart()">Cart (<span id="cart-count">0</span>)</button></li>
+            </ul>
+        </nav>
     </header>
 
+    <!-- Hero Section -->
+    <section id="hero">
+        <h1>Welcome to My Online Shop</h1>
+        <p>Discover our best deals and exclusive products!</p>
+        <button>Shop Now</button>
+    </section>
+
+    <!-- Products Section -->
     <section id="products">
-        <div class="Pull rond" data-id="1">
-            <img src="images\images.jpg" alt="Product 1" class="product-img">
-            <h2>Pull rond</h2>
+        <h2>Featured Products</h2>
+        <div class="product" data-id="1">
+            <img src="images/pull.jpg" alt="Pull rond" class="product-img">
+            <h3>Pull rond</h3>
             <p>Price: $40</p>
-            <button onclick="addToCart(1, 'Product 1', 10)">Add to Cart</button>
+            <p class="rating">Rating: ⭐⭐⭐⭐☆</p>
+            <button onclick="addToCart(1, 'Pull rond', 40)">Add to Cart</button>
         </div>
+
         <div class="product" data-id="2">
-            <img src="images\product2.jpg" alt="Product 2" class="product-img">
-            <h2>Pantalon cargo</h2>
+            <img src="images/pantalon.jpg" alt="Pantalon cargo" class="product-img">
+            <h3>Pantalon cargo</h3>
             <p>Price: $50</p>
-            <button onclick="addToCart(2, 'Product 2', 15)">Add to Cart</button>
+            <p class="rating">Rating: ⭐⭐⭐⭐⭐</p>
+            <button onclick="addToCart(2, 'Pantalon cargo', 50)">Add to Cart</button>
         </div>
+
         <div class="product" data-id="3">
-            <img src="images\product3.jpg" alt="Product 3" class="product-img">
-            <h2>Chemise</h2>
+            <img src="images/chemise.jpg" alt="Chemise" class="product-img">
+            <h3>Chemise</h3>
             <p>Price: $35</p>
-            <button onclick="addToCart(3, 'Product 3', 20)">Add to Cart</button>
+            <p class="rating">Rating: ⭐⭐⭐⭐☆</p>
+            <button onclick="addToCart(3, 'Chemise', 35)">Add to Cart</button>
         </div>
     </section>
 
+    <!-- Cart Modal -->
     <div id="cart-modal" style="display: none;">
         <h2>Your Cart</h2>
         <div id="cart-items"></div>
@@ -46,6 +74,20 @@
         <button onclick="hideCart()">Close</button>
     </div>
 
+    <!-- Footer Section -->
+    <footer>
+        <section id="about">
+            <h3>About Us</h3>
+            <p>We are a leading online store, offering the best products at competitive prices. Our customer service is top-notch!</p>
+        </section>
+        <section id="contact">
+            <h3>Contact Us</h3>
+            <p>Email: support@myonlineshop.com | Phone: +123 456 789</p>
+        </section>
+        <p>&copy; 2024 My Online Shop</p>
+    </footer>
+
     <script src="script.js"></script>
 </body>
+
 </html>
